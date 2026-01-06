@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { cookies } from 'next/headers';
 
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 
@@ -136,6 +137,7 @@ export default async function RootLayout({
                 <SessionTracker />
                 {children}
                 <Analytics />
+                <SpeedInsights />
                 <GlobalErrorIndicator />
               </SiteProvider>
               <DownloadPanel />
